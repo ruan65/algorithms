@@ -21,8 +21,7 @@ public class SelectionSort {
         }
     }
 
-
-    public static void main(String[] args) {
+    public static void main(String[] args) {  // Let's check it out
         int[][] data = {
                 {},
                 {1},
