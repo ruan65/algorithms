@@ -8,22 +8,19 @@ public class SelectionSort {
 
         int len = arr.length;
 
-        for (int i = 0; i < len; i++) {
-            int index = i;
-            int min = arr[i];
-            for (int j = i + 1; j < len; j++) {
-                if (min > arr[j]) {
-                    min = arr[j];
-                    index = j;
+        for (int pos = 0; pos < len - 1; pos++) {
+
+            for (int indx = pos + 1; indx < len; indx++) {
+
+                if (arr[pos] > arr[indx]) {
+                    int tmp = arr[pos];
+                    arr[pos] = arr[indx];
+                    arr[indx] = tmp;
                 }
-            }
-            if (arr[i] > min) {
-                int tmp = arr[i];
-                arr[i] = min;
-                arr[index] = tmp;
             }
         }
     }
+
 
     public static void main(String[] args) {
         int[][] data = {
