@@ -5,20 +5,14 @@ public class InsertionSortSimple {
     public static void sort(int[] arr) {
 
         for (int curr = 1; curr < arr.length; curr++) {
-
-            int prev = curr - 1;
-            while (prev >= 0 && arr[prev + 1] < arr[prev]) {
-                swap(arr, prev + 1, prev);
+            int newValue = arr[curr];
+            int prev = curr;
+            while (prev > 0 && newValue < arr[prev - 1]) {
+                arr[prev] = arr[prev - 1];
                 prev--;
             }
+            arr[prev] = newValue;
         }
-    }
-
-    private static void swap(int[] arr, int curr, int prev) {
-
-        int tmp = arr[prev];
-        arr[prev] = arr[curr];
-        arr[curr] = tmp;
     }
 }
 
