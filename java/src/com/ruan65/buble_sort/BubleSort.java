@@ -10,6 +10,7 @@ public class BubleSort {
     }
 
     private static void popUp(int[] arr, int bound) {
+
         for (int index = 1; index < arr.length - bound; index++) {
             if (arr[index - 1] > arr[index])
                 swap(arr, index - 1, index);
@@ -17,6 +18,7 @@ public class BubleSort {
     }
 
     private static void swap(int[] arr, int i, int j) {
+
         int tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;
