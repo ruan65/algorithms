@@ -35,6 +35,5 @@ class App {
         for (int i = 0; i < 15; i++) {
             new Thread(new FiboGenRunnable(i)).start();
         }
-
     }
 }
